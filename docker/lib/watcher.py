@@ -5,7 +5,7 @@ import time
 
 
 IGNORE_DIRS = [".git", "node_modules"]
-WATCHED_EXTS = [".js", ".json"]
+WATCHED_EXTS = [".html", ".js", ".json"]
 
 
 class Watcher:
