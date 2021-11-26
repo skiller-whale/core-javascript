@@ -8,12 +8,11 @@ function betterTypeOf (value) {
     }
 }
 
-console.log(betterTypeOf(12))
-console.log(betterTypeOf('string'))
-console.log(betterTypeOf(['array']))
-console.log(betterTypeOf({ objectProperty: 'prop'}))
-console.log(betterTypeOf(null))
-console.log(betterTypeOf(undefined))
-console.log(betterTypeOf(function test () {}))
-console.log(betterTypeOf(true))
-console.log(betterTypeOf(false))
+console.log(betterTypeOf(12)) // 'number'
+console.log(betterTypeOf('string')) // 'string'
+console.log(betterTypeOf(['array'])) // 'array'
+console.log(betterTypeOf({ objectProperty: 'prop'})) // 'object'
+console.log(betterTypeOf(null)) // 'null'
+console.log(betterTypeOf(undefined)) // 'undefined'
+console.log(betterTypeOf(function test () {})) // 'function'
+console.log(betterTypeOf(true)) // 'boolean'
