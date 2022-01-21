@@ -1,3 +1,5 @@
+'use strict'
+
 const a = ['hello', 'goodbye']
 const b = ['hello', 'goodbye']
 console.log(1, ": ", a === b)

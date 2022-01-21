@@ -1,10 +1,12 @@
+'use strict'
+
 const person = {
   forenames: ['Ernest', 'Miller'],
   surname: 'Herringway',
   age: 61,
   physicalAttributes: {
     eyeColour: 'brown',
-    hairColor: 'grey',
+    hairColour: 'grey',
     beard: true,
   }
 }
@@ -16,11 +18,13 @@ function printSurnameAndAge (person) {
 function printFirstNameAndBeardStatus (person) {
   if (person.physicalAttributes.beard === true) {
     console.log(person.forenames[0], 'had a beard')
+  } else {
+    console.log(firstName, 'did not have a beard')
   }
 }
 
 function printFullNameAndEyeColourAndHairColour (person) {
-  console.log(person.forenames[0], person.forenames[1], person.surname, 'had', person.physicalAttributes.eyeColour, 'eyes and', person.physicalAttributes.hairColor, 'hair')
+  console.log(person.forenames[0], person.forenames[1], person.surname, 'had', person.physicalAttributes.eyeColour, 'eyes and', person.physicalAttributes.hairColour, 'hair')
 }
 
 printSurnameAndAge(person)

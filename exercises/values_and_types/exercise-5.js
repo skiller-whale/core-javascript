@@ -1,3 +1,5 @@
+'use strict'
+
 function betterTypeOf (value) {
     if (true) { // the expression here must evaluate to true to execute the code inside this block
         return

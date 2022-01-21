@@ -1,3 +1,5 @@
+'use strict'
+
 const adaTheSkillerWhale = {
   givenName: 'Ada',
   species: ['Orcinus', 'Orca'],

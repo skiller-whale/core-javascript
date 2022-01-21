@@ -1,3 +1,5 @@
+'use strict'
+
 const whales = ['Minke', 'Beluga', 'Sperm', 'Humpback', 'Blue', 'Pilot', 'Skiller']
 
 // write your first loop here
