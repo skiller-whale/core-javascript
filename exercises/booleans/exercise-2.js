@@ -1,27 +1,24 @@
 'use strict'
 
-function printContent (blog) {
+function getContent (blog) {
   if (/* Write a condition here */) {
-    console.log(blog.content)
-  } else {
-    console.log('No content!')
+    return 'No content!'
   }
+  return blog.content
 }
 
-function printCategory (blog) {
+function getCategory (blog) {
   if (/* Write a condition here */) {
-    console.log(blog.category)
-  } else {
-    console.log('No category!')
+    return 'No category!'
   }
+  return blog.category
 }
 
-function printComments (blog) {
+function getComments (blog) {
   if (/* Write a condition here */) {
-    console.log(blog.comments)
-  } else {
-    console.log('No comments!')
+    return 'No comments!'
   }
+  return blog.comments
 }
 
 // ------------------------------------------------------//
@@ -33,6 +30,6 @@ const blog = {
   comments: [],
 }
 
-printContent(blog)
-printCategory(blog)
-printComments(blog)
+console.log(getContent(blog))
+console.log(getCategory(blog))
+console.log(getComments(blog))

@@ -22,7 +22,7 @@ const draftBlog1 = {
   author: {
     name: 'Agatha Fishtie'
   },
-  comments: [],
+  comments: ['Great blog!'],
 }
 
 const draftBlog2 = {

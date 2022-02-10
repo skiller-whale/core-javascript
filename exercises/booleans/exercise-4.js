@@ -4,7 +4,7 @@ function displayPreview (blog) {
   const title = blog.title || 'Lorem Ipsum'
   const authorName = (blog.author && blog.author.name) || 'Anonymous'
   const contents = blog.contents || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  const comments = (blog.comments && blog.comments.length) || ['lorem ipsum', 'lorem ipsum']
+  const comments = blog.comments && blog.comments.length ? blog.comments : ['lorem ipsum', 'lorem ipsum']
   const isPublic = blog.isPublic || true
 
 // ------------------------------------------------------//
