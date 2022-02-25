@@ -6,7 +6,7 @@ function removeElement (array, element) {
 // Don't edit pastaMenu
 const pastaMenu = ['Spaghetti With Garlic', 'Aglio Olio', 'Carbonara', 'Bolognese', 'Penne Arrabiatta', 'Ravioli Stuffed With Spinach', 'Penne Alfredo']
 
-removeItem(pastaMenu, 'Aglio Olio')
-removeItem(pastaMenu, 'Penne Alfredo')
+removeElement(pastaMenu, 'Aglio Olio')
+removeElement(pastaMenu, 'Penne Alfredo')
 
 console.log(pastaMenu)

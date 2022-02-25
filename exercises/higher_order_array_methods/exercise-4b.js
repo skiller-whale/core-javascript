@@ -8,8 +8,7 @@ function findMaxItems(menu, amount) {
 // ------------------------------------------------------//
 
 function sortMenu(menu) {
-  menu
-    .sort((a, b) => b.price - a.price)
+  return menu.sort((a, b) => b.price - a.price)
 }
 
 const menu = [
