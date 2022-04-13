@@ -12,15 +12,13 @@ function buildPerson (firstName, lastName, catchPhrase) {
 }
 
 function addProperty (object, key, value) {
-  object[key]
-    ? console.log(key, 'already exists')
-    : object[key] = value
+  if (object[key]) return
+  object[key] = value
 }
 
 function removeProperty (object, key) {
-  object[key]
-    ? delete object[key]
-    : console.log(key, 'does not exist')
+  if (!object[key]) return
+  delete object[key]
 }
 
 const person = buildPerson('Swim', 'Shady', 'Arms Spaghetti')
