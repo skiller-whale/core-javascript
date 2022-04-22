@@ -1,31 +1,22 @@
 "use strict"
 
-function buildPerson (firstName, lastName, catchPhrase) {
-  return {
-    firstName: firstName,
-    lastName: lastName,
+const item = {
+  label: 'crab sticks',
+  price: 4.99,
+}
 
-    catchPhrase: function () {
-      console.log(catchPhrase)
-    }
+function getPrice (item) {
+  return `£${item.price.toFixed(2)}`
+}
+
+function setPrice (item, value) {
+  const num = parseFloat(value)
+  if (!isFinite(num)) {
+    console.warn('price must be a number')
+    return
   }
+  item.price = value
 }
 
-function addProperty (object, key, value) {
-  object[key]
-    ? console.log(key, 'already exists')
-    : object[key] = value
-}
-
-function removeProperty (object, key) {
-  object[key]
-    ? delete object[key]
-    : console.log(key, 'does not exist')
-}
-
-const person = buildPerson('Swim', 'Shady', 'Arms Spaghetti')
-person.catchPhrase()
-
-addProperty(person, 'age', 21)
-removeProperty(person, 'catchPhrase')
-console.log(person)
+setPrice(item, 3.50)
+console.log(getPrice(item))

@@ -1,100 +1,29 @@
 "use strict"
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
 
-const object1 = { name: 'object1' }
-Object.freeze(object1)
-const object2 = {}
-Object.defineProperty(object2, 'name', { value: 'object2' })
-const object3 = { name: 'object3' }
-Object.preventExtensions(object3)
-const object4 = { name: 'object4' }
-Object.seal(object4)
+function buildPerson (firstName, lastName, catchPhrase) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
 
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
-// Do not read the contents of this file
+    catchPhrase: function () {
+      console.log(catchPhrase)
+    }
+  }
+}
+
+function addProperty (object, key, value) {
+  if (object[key]) return
+  object[key] = value
+}
+
+function removeProperty (object, key) {
+  if (!object[key]) return
+  delete object[key]
+}
+
+const person = buildPerson('Swim', 'Shady', 'Arms Spaghetti')
+person.catchPhrase()
+
+addProperty(person, 'age', 21)
+removeProperty(person, 'catchPhrase')
+console.log(person)
