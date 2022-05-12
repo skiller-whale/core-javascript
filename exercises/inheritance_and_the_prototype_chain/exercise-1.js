@@ -1,3 +1,5 @@
+'use strict'
+
 const theObjectPrototype = Object.getPrototypeOf({})
 
 // Write your code here

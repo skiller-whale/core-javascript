@@ -1,3 +1,5 @@
+'use strict'
+
 function discountVeganItems (menu) {
   // Complete this function
 

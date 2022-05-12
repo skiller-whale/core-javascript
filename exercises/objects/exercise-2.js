@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 function buildPerson (firstName, lastName, catchPhrase) {
   return {

@@ -1,3 +1,5 @@
+'use strict'
+
 function bestsellerLessThanADollar(menu) {
   // Complete this function
 

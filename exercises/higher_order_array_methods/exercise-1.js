@@ -1,3 +1,5 @@
+'use strict'
+
 function glutenFreeOptionsAvailable(menu) {
   // Complete this function
 

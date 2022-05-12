@@ -1,3 +1,5 @@
+'use strict'
+
 function removeElement (array, element) {
   // Complete this function
 

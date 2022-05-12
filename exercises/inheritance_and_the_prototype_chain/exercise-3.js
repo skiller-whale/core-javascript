@@ -1,3 +1,5 @@
+'use strict'
+
 const betterObjectPrototype = {
   toString () { return JSON.stringify(this) },
 

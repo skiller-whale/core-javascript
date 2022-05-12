@@ -1,3 +1,5 @@
+'use strict'
+
 function BetterObject (firstName, lastName) {
   this.firstName = firstName
   this.lastName = lastName

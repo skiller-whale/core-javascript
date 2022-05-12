@@ -1,3 +1,5 @@
+'use strict'
+
 const drinks = [
   { name: 'Iced Tea', price: 1 },
   { name: 'Latte', price: 1.75 },

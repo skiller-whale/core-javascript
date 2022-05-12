@@ -1,3 +1,5 @@
+'use strict'
+
 function sortMenu(menu) {
   // Complete this function
 

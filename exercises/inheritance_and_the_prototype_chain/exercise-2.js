@@ -1,3 +1,5 @@
+'use strict'
+
 const theObjectPrototype = Object.getPrototypeOf({})
 theObjectPrototype.equals = function (object) { return this.toString() === object.toString() }
 theObjectPrototype.toString = function () { return JSON.stringify(this) }

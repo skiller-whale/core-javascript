@@ -1,3 +1,5 @@
+'use strict'
+
 function findMaxItems(menu, amount) {
   // Complete this function
 
