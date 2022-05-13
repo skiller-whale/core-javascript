@@ -1,8 +1,7 @@
-'use strict'
+"use strict"
 
 function sortMenu(menu) {
   // Complete this function
-
 }
 
 // ------------------------------------------------------//
@@ -10,13 +9,13 @@ function sortMenu(menu) {
 // ------------------------------------------------------//
 
 const drinksMenu = [
-  { name: 'Iced Tea', price: 2, vegan: true },
-  { name: 'Latte', price: 1.5, vegan: false },
-  { name: 'Cappuccino', price: 1.75, vegan: false },
-  { name: 'Lemon Ice Tea', price: 2, vegan: true },
-  { name: 'Mocha', price: 2.5, vegan: false },
-  { name: 'Chamomile Tea', price: 0.75, vegan: true },
-  { name: 'Green Tea', price: 0.5, vegan: true },
+  { name: "Iced Tea", price: 2, vegan: true },
+  { name: "Latte", price: 1.5, vegan: false },
+  { name: "Cappuccino", price: 1.75, vegan: false },
+  { name: "Lemon Ice Tea", price: 2, vegan: true },
+  { name: "Mocha", price: 2.5, vegan: false },
+  { name: "Chamomile Tea", price: 0.75, vegan: true },
+  { name: "Green Tea", price: 0.5, vegan: true },
 ]
 
 sortMenu(drinksMenu)

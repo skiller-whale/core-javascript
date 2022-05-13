@@ -1,34 +1,34 @@
-'use strict'
+"use strict"
 
-function displayPreview (blog) {
+function displayPreview(blog) {
   // Populate the below variables with default values
   const title = blog.title
   const authorName = blog.author.name
   const contents = blog.contents
   const comments = blog.comments
 
-// ------------------------------------------------------//
-// Don't edit the code below here                        //
-// ------------------------------------------------------//
+  // ------------------------------------------------------//
+  // Don't edit the code below here                        //
+  // ------------------------------------------------------//
 
   console.log(title)
-  console.log('By', authorName)
+  console.log("By", authorName)
   console.log(contents)
   console.log(comments)
 }
 
 const draftBlog1 = {
-  title: '',
+  title: "",
   author: {
-    name: 'Agatha Fishtie'
+    name: "Agatha Fishtie",
   },
-  comments: ['Great blog!'],
+  comments: ["Great blog!"],
 }
 
 const draftBlog2 = {
-  title: 'The Magestic Whale',
+  title: "The Magestic Whale",
 }
 
 displayPreview(draftBlog1)
-console.log('----------')
+console.log("----------")
 displayPreview(draftBlog2)

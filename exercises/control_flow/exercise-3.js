@@ -1,3 +1,3 @@
-'use strict'
+"use strict"
 
-const animals = ['Giraffe', 'Gecko', 'Goat', 'Goldfish', 'Goose']
+const animals = ["Giraffe", "Gecko", "Goat", "Goldfish", "Goose"]

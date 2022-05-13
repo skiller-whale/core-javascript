@@ -1,6 +1,6 @@
-'use strict'
+"use strict"
 
-function canViewBlog (blog, user) {
+function canViewBlog(blog, user) {
   if (/* Write a boolean expression here */) {
     return true
   }
@@ -10,7 +10,7 @@ function canViewBlog (blog, user) {
   return false
 }
 
-function hasComments (blog) {
+function hasComments(blog) {
   /* Return true if the blog has comments otherwise return false */
 }
 
@@ -19,7 +19,7 @@ function hasComments (blog) {
 // ------------------------------------------------------//
 
 const blog = {
-  author: 'Bob',
+  author: "Bob",
   isPublic: false,
   allowsComments: true,
   isDraft: false,
@@ -27,25 +27,25 @@ const blog = {
 }
 
 const Bob = {
-  name: 'Bob',
-  isAdmin: true
+  name: "Bob",
+  isAdmin: true,
 }
 
 const Alice = {
-  name: 'Alice',
-  isAdmin: false
+  name: "Alice",
+  isAdmin: false,
 }
 
 const users = [Bob, Alice]
 
 for (let user of users) {
   if (canViewBlog(blog, user)) {
-    console.log(user.name, 'can see the blog')
+    console.log(user.name, "can see the blog")
   } else {
-    console.log(user.name, 'cannot see the blog')
+    console.log(user.name, "cannot see the blog")
   }
 }
 
 if (!hasComments(blog)) {
-  console.log('Blog has no comments!')
+  console.log("Blog has no comments!")
 }

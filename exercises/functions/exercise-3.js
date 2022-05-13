@@ -1,4 +1,4 @@
-'use strict'
+"use strict"
 
 const numbers = [2, 4, 10, 5, 6]
 

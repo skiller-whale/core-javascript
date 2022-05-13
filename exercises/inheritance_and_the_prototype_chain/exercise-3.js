@@ -1,21 +1,25 @@
-'use strict'
+"use strict"
 
 const betterObjectPrototype = {
-  toString () { return JSON.stringify(this) },
+  toString() {
+    return JSON.stringify(this)
+  },
 
-  equals (object) { return this.toString() === object.toString() },
+  equals(object) {
+    return this.toString() === object.toString()
+  },
 }
 
-function createBetterObject (firstName, lastName) {
+function createBetterObject(firstName, lastName) {
   const newObject = Object.create(betterObjectPrototype)
   newObject.firstName = firstName
   newObject.lastName = lastName
   return newObject
 }
 
-const object1 = createBetterObject('Cod', 'Stewart')
-const object2 = createBetterObject('Cod', 'Stewart')
-const object3 = createBetterObject('Sealion', 'Dion')
+const object1 = createBetterObject("Cod", "Stewart")
+const object2 = createBetterObject("Cod", "Stewart")
+const object3 = createBetterObject("Sealion", "Dion")
 
 console.log(object1.equals(object2)) // true
 console.log(object1.equals(object3)) // false

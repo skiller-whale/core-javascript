@@ -1,14 +1,21 @@
-'use strict'
+"use strict"
 
-function removeElement (array, element) {
+function removeElement(array, element) {
   // Complete this function
-
 }
 
 // Don't edit pastaMenu
-const pastaMenu = ['Spaghetti With Garlic', 'Aglio Olio', 'Carbonara', 'Bolognese', 'Penne Arrabiatta', 'Ravioli Stuffed With Spinach', 'Penne Alfredo']
+const pastaMenu = [
+  "Spaghetti With Garlic",
+  "Aglio Olio",
+  "Carbonara",
+  "Bolognese",
+  "Penne Arrabiatta",
+  "Ravioli Stuffed With Spinach",
+  "Penne Alfredo",
+]
 
-removeElement(pastaMenu, 'Aglio Olio')
-removeElement(pastaMenu, 'Penne Alfredo')
+removeElement(pastaMenu, "Aglio Olio")
+removeElement(pastaMenu, "Penne Alfredo")
 
 console.log(pastaMenu)

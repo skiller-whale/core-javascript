@@ -1,22 +1,22 @@
-'use strict'
+"use strict"
 
-function getContent (blog) {
-  if (/* Write a condition here */) {
-    return 'No content!'
+function getContent(blog) {
+  if (/* Write a boolean expression here */) {
+    return "No content!"
   }
   return blog.content
 }
 
-function getCategory (blog) {
-  if (/* Write a condition here */) {
-    return 'No category!'
+function getCategory(blog) {
+  if (/* Write a boolean expression here */) {
+    return "No category!"
   }
   return blog.category
 }
 
-function getComments (blog) {
-  if (/* Write a condition here */) {
-    return 'No comments!'
+function getComments(blog) {
+  if (/* Write a boolean expression here */) {
+    return "No comments!"
   }
   return blog.comments
 }
@@ -26,7 +26,7 @@ function getComments (blog) {
 // ------------------------------------------------------//
 
 const blog = {
-  content: '',
+  content: "",
   comments: [],
 }
 

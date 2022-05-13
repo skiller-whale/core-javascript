@@ -1,8 +1,7 @@
-'use strict'
+"use strict"
 
 function calculateTotal(order) {
   // Complete this function
-
 }
 
 // ------------------------------------------------------//
@@ -10,10 +9,10 @@ function calculateTotal(order) {
 // ------------------------------------------------------//
 
 const order = [
-  {name: 'Ice Tea', price: 5, quantity: 5},
-  {name: 'Cappuccino', price: 5, quantity: 2},
-  {name: 'Truffle', price: 5, quantity: 1},
-  {name: 'Pasta', price: 5, quantity: 3},
+  { name: "Ice Tea", price: 5, quantity: 5 },
+  { name: "Cappuccino", price: 5, quantity: 2 },
+  { name: "Truffle", price: 5, quantity: 1 },
+  { name: "Pasta", price: 5, quantity: 3 },
 ]
 
-console.log('Total:', calculateTotal(order))
+console.log("Total:", calculateTotal(order))
