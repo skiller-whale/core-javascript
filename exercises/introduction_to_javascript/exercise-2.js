@@ -1,9 +1,7 @@
-"use strict";
+"use strict"
 
-console.log("four times twelve is", 0);
+console.log("6 × 7 is", answer1)
 
-console.log("fifteen times nine divided by eight is", 0);
+console.log("126 × 3 ÷ 9 is", answer2)
 
-console.log("the cosine of twelve multiplied by ten is", 0);
-
-console.log('the negation of "true AND false" is', 0);
+console.log("cosine(pi) × (11 - 53) is ", answer3)
