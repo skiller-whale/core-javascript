@@ -3,6 +3,8 @@ FROM node:16-alpine
 RUN apk add --no-cache python3 \
   py3-pip
 
+RUN pip install requests
+
 RUN mkdir /session
 
 COPY ./docker/sync /opt/skillerwhale_sync/
