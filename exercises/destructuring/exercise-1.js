@@ -19,7 +19,7 @@ function printFirstNameAndBeardStatus(person) {
   if (person.physicalAttributes.beard === true) {
     console.log(person.forenames[0], "had a beard")
   } else {
-    console.log(firstName, "did not have a beard")
+    console.log(person.forenames[0], "did not have a beard")
   }
 }
 
