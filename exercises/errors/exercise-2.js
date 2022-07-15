@@ -1,12 +1,17 @@
 "use strict"
 const fs = require('fs')
 
+function multiply(a, b) {
+  return a * b
+}
+
 function processData(fileName) {
   data = fs.readFileSync(fileName, 'utf8');
   const parsed = JSON.parse(data)
-  console.log(parsed.a * parsed.b)
+  const result = multiply(parsed.a, parsed.b)
+  console.log(result)
 }
 
 for (let i = 1; i < 5; i++) {
-  console.log(processData(`./inputs/${i}.json`))
+  processData(`./inputs/${i}.json`)
 }

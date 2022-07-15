@@ -37,7 +37,7 @@ try {
 }
 
 try {
-  const sum = true + 3
+  const sum = true + false
   console.log(6, 'This does not cause an error. The value of sum is', sum)
 } catch (e) {
   console.log(6, e.name, ':', e.message)
