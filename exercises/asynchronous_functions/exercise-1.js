@@ -19,13 +19,6 @@ function displayHackerNewsSearchResult(searchTerm, data) {
   console.log("")
 }
 
-function responseToJson(response) {
-  if (!response.ok) {
-    throw new Error(`bad response: ${response.status}`)
-  }
-  return response.json()
-}
-
 function search() {
   fs.readFile("./data/searchTerms.json", "utf-8")
 }
