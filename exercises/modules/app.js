@@ -36,12 +36,12 @@ const daysOfTheWeek = {
 
 // email templates
 const INVITE_LEARNER_EMAIL = "Hi Learner, you are invited to the following session:"
-const INVITE_TRAINER_EMAIL = "Hi Trainer, you are teaching the following session:"
-const REMIND_LEARNER_EMAIL = "Hi Leaner, here is your reminder for the upcoming session:"
-const REMIND_TRAINER_EMAIL = "Hi Trainer, here is your reminder for the upcoming session:"
+const INVITE_COACH_EMAIL = "Hi Coach, you are teaching the following session:"
+const REMIND_LEARNER_EMAIL = "Hi Learner, here is your reminder for the upcoming session:"
+const REMIND_COACH_EMAIL = "Hi Coach, here is your reminder for the upcoming session:"
 
-// trainer
-class Trainer {
+// coach
+class Coach {
   constructor(name, email) {
     this.name = name
     this.email = email
@@ -80,11 +80,11 @@ class Session {
   inviteSent = false
   reminderSent = false
 
-  constructor(module, time, learners, trainer) {
+  constructor(module, time, learners, coach) {
     this.module = module
     this.time = time
     this.learners = learners
-    this.trainer = trainer
+    this.coach = coach
   }
 
   sendInvite() {
@@ -92,7 +92,7 @@ class Session {
       this.learners.forEach((learner) => {
         learner.sendEmail(INVITE_LEARNER_EMAIL, this.module, this.time)
       })
-      this.trainer.sendEmail(INVITE_TRAINER_EMAIL, this.module, this.time)
+      this.coach.sendEmail(INVITE_COACH_EMAIL, this.module, this.time)
     }
     this.inviteSent = true
   }
@@ -102,7 +102,7 @@ class Session {
       this.learners.forEach((learner) => {
         learner.sendEmail(REMIND_LEARNER_EMAIL, this.module, this.time)
       })
-      this.trainer.sendEmail(REMIND_TRAINER_EMAIL, this.module, this.time)
+      this.coach.sendEmail(REMIND_COACH_EMAIL, this.module, this.time)
     }
     this.reminderSent = true
   }
@@ -114,7 +114,7 @@ class Session {
 }
 
 const learner = new Learner("Cod Stewart", "cod@stewart.com")
-const trainer = new Trainer("Swim Shady", "swim@shady.com")
-const session = new Session("arrays", new Date(Date.now() + 5 * 24 * 60 * 60 * 1000), [learner], trainer)
+const coach = new Coach("Swim Shady", "swim@shady.com")
+const session = new Session("arrays", new Date(Date.now() + 5 * 24 * 60 * 60 * 1000), [learner], coach)
 
 session.sendInvite()
