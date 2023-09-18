@@ -1,52 +1,20 @@
-"use strict"
-
-function displayPreview(blog) {
-  // Populate the below variables with default values
-  const title = blog.title
-  const authorName = blog.author.name
-  const contents = blog.contents
-  const comments = blog.comments
-
-  // ------------------------------------------------------//
-  // Don't edit the code below here                        //
-  // ------------------------------------------------------//
-
-  console.log(title)
-  console.log("By", authorName)
-  console.log(contents)
-  console.log(comments)
+const article = {
+  title: "Jojoba oil suitable alternative to sperm whale oil",
+  author: "Ada the Skiller Whale",
+  content: "Spermaceti is a waxy substance found in the head cavities of the sperm whale, used to make cosmetics and candles since the 17th C. But jojoba oil is just as good and smells just as weird!",
+  updated: { hours: 16, minutes: 37 },
+  comments: ["Thank goodness!", "What a discovery! I love you Ada."],
+  isWorthReading: true,
 }
 
-const draftBlog1 = {
-  title: "Fishstory",
-  author: {
-    name: "Agatha Fishtie",
-  },
-  comments: ["Great blog!"],
-  contents: "This is a story about the history of fish.",
-  isPublic: true
+function getAuthor(article) {
+  return article.author || "anonymous"
 }
 
-const draftBlog2 = {
-  title: "",
-  comments: [],
-  isPublic: false
+function getIsWorthReading(article) {
+  return article.isWorthReading || false
 }
 
-const draftBlog3 = {
-  title: "Moby Dick",
-  author: {
-    name: "",
-  },
-  comments: ["Great story!"],
-  contents: "Call me Ishmael.",
-  isPublic: "",
-  commentsDisabled: true
+function getComments(article) {
+  return article.comments || []
 }
-
-displayPreview(draftBlog1)
-console.log("----------")
-displayPreview(draftBlog2)
-console.log("----------")
-displayPreview(draftBlog3)
-

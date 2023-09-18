@@ -1,51 +1,36 @@
-"use strict"
-
-function canViewBlog(blog, user) {
-  if (/* Write a boolean expression here */) {
-    return true
-  }
-  if (/* Write a boolean expression here */) {
-    return true
-  }
-  return false
+const article = {
+  title: "Jojoba oil suitable alternative to sperm whale oil",
+  author: "Ada the Skiller Whale",
+  content: "Spermaceti is a waxy substance found in the head cavities of the sperm whale, used to make cosmetics and candles since the 17th C. But jojoba oil is just as good and smells just as weird!",
+  updated: { hours: 16, minutes: 37 },
+  comments: ["Thank goodness!", "What a discovery! I love you Ada."],
+  isWorthReading: true,
 }
 
-function hasComments(blog) {
-  /* Return true if the blog has comments otherwise return false */
-}
-
-// ------------------------------------------------------//
-// Don't edit the code below here                        //
-// ------------------------------------------------------//
-
-const blog = {
-  author: "Bob",
-  isPublic: false,
-  allowsComments: true,
-  isDraft: false,
-  comments: [],
-}
-
-const Bob = {
-  name: "Bob",
-  isAdmin: true,
-}
-
-const Alice = {
-  name: "Alice",
-  isAdmin: false,
-}
-
-const users = [Bob, Alice]
-
-for (let user of users) {
-  if (canViewBlog(blog, user)) {
-    console.log(user.name, "can see the blog")
+function getTimeUpdated(article) {
+  if (article.updated.hours < 12) {
+    return `${article.updated.hours}:${article.updated.minutes}am`
   } else {
-    console.log(user.name, "cannot see the blog")
+    return `${article.updated.hours - 12}:${article.updated.minutes}pm`
   }
 }
 
-if (!hasComments(blog)) {
-  console.log("Blog has no comments!")
+function determineReadability(article) {
+  let isWorthReading
+  if (!article.content.includes("Skiller Whale")) {
+    isWorthReading = false
+  } else {
+    isWorthReading = true
+  }
+  article.isWorthReading = isWorthReading
+}
+
+function getPopularity(article) {
+  if (article.comments.length === 0) {
+    return "no one is very interested in this article"
+  } else if (article.comments.length > 100) {
+    return "lots of people are interested in this article"
+  } else {
+    return "some people are interested in this article."
+  }
 }
