@@ -1,35 +1,19 @@
-"use strict"
+// ----------------------------------------------------------------------
+// business logic
+// ----------------------------------------------------------------------
+function calculateDiscount(customerType) {
+  let totalDiscount = 0.05;
+  if (customerType === "premium") {
+    totalDiscount += 0.1;
+  } else if (customerType === "vip") {
+    totalDiscount += 0.2;
+  }
+  return totalDiscount;
+}
 
-let a = 1
-a + 5
-console.log(1, ": ", a)
-
-let b = a + 5
-console.log(2, ": ", b)
-
-a = a + 2
-console.log(3, ": ", a)
-
-let emptyObject = {}
-
-let newObject = emptyObject
-newObject.property = "hello"
-console.log(4, ": ", newObject)
-
-console.log(5, ": ", emptyObject)
-
-let helloString = "hello"
-helloString[0] = "x"
-console.log(6, ": ", helloString)
-
-let helloArray = ["h", "e", "l", "l", "o"]
-helloArray[0] = "y"
-console.log(7, ": ", helloArray)
-
-const object = {}
-object.secret = undefined
-console.log(8, ": ", object)
-
-const x = 5
-x = x + 5
-console.log(9, ": ", x)
+// ----------------------------------------------------------------------
+// execution
+// ----------------------------------------------------------------------
+console.log(`Standard customer discount: ${calculateDiscount("standard")}`); // Should output: Standard customer discount: 0.05
+console.log(`Premium customer discount: ${calculateDiscount("premium")}`);   // Should output: Premium customer discount: 0.15
+console.log(`VIP customer discount: ${calculateDiscount("vip")}`);           // Should output: VIP customer discount: 0.25

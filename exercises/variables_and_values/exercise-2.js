@@ -1,7 +1,23 @@
-"use strict"
+// ----------------------------------------------------------------------
+// business logic
+// ----------------------------------------------------------------------
+function calculateDiscount(customerType) {
+  let totalDiscount = 0.05;
+  if (customerType === "premium") {
+    totalDiscount += 0.1;
+  } else if (customerType === "vip") {
+    totalDiscount += 0.2;
+  }
+  return totalDiscount;
+}
 
-const nums = [2, 3, 5, 4, 1]
+function userDiscountDisplay(customerType) {
+  // TODO: return a string displaying the customer's type and total discount as a percentage
+}
 
-// write your code here
-
-console.log(nums)
+// ----------------------------------------------------------------------
+// execution
+// ----------------------------------------------------------------------
+console.log(userDiscountDisplay("standard")); // Should output: As a standard customer, your total discount is 5%.
+console.log(userDiscountDisplay("premium"));  // Should output: As a premium customer, your total discount is 15%.
+console.log(userDiscountDisplay("vip"));      // Should output: As a vip customer, your total discount is 25%.

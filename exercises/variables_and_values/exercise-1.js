@@ -1,15 +1,26 @@
-"use strict"
+// ----------------------------------------------------------------------
+// business logic
+// ----------------------------------------------------------------------
+function calculateFinalPrice(totalPrice, customerType) {
+  baseDiscount = 0.05;
 
-let person = {
-  firstName: undefined,
-  lastName: undefined,
-  age: 61,
-  location: "Idaho",
+  if (customerType === "premium") {
+    extraDiscount = 0.10;
+    totalDiscount = baseDiscount + extraDiscount;
+  } else if (customerType === "vip") {
+    extraDiscount = 0.20;
+    totalDiscount = baseDiscount + extraDiscount;
+  } else {
+    totalDiscount = baseDiscount;
+  }
+  
+  finalPrice = totalPrice * (1 - totalDiscount);
+  return finalPrice;
 }
 
-function addNames(firstName, lastName) {
-  person = { firstName, lastName }
-}
-
-addNames("Ernest", "Herringway")
-console.log(person)
+// ----------------------------------------------------------------------
+// execution
+// ----------------------------------------------------------------------
+console.log(calculateFinalPrice(100, "standard")); // Should output: 95
+console.log(calculateFinalPrice(100, "premium"));  // Should output: 85
+console.log(calculateFinalPrice(100, "vip"));      // Should output: 75
