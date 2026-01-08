@@ -1,23 +1,21 @@
-"use strict"
-
-function betterTypeOf(value) {
-  if (true) {
-    // the expression above must evaluate to true to execute the code inside this block
-    return
-  } else if (true) {
-    // the expression above must evaluate to true to execute the code inside this block
-    return
-  } else {
-    // everything else will enter this block
-    return
-  }
+// ----------------------------------------------------------------------
+// business logic
+// ----------------------------------------------------------------------
+function typeOf(value) {
+  // TODO: implement this function
 }
 
-console.log(betterTypeOf(12)) // "number"
-console.log(betterTypeOf("string")) // "string"
-console.log(betterTypeOf([])) // "array"
-console.log(betterTypeOf({})) // "object"
-console.log(betterTypeOf(null)) // "null"
-console.log(betterTypeOf(undefined)) // "undefined"
-console.log(betterTypeOf(function test() {})) // "function"
-console.log(betterTypeOf(true)) // "boolean"
+// ----------------------------------------------------------------------
+// execution
+// ----------------------------------------------------------------------
+console.log(typeOf(12));                 // should log: "number"
+console.log(typeOf(NaN));                // should log: "bad-number"
+console.log(typeOf(Infinity));           // should log: "bad-number"
+console.log(typeOf(-Infinity));          // should log: "bad-number"
+console.log(typeOf("string"));           // should log: "string"
+console.log(typeOf([]));                 // should log: "array"
+console.log(typeOf({}));                 // should log: "object"
+console.log(typeOf(null));               // should log: "null"
+console.log(typeOf(undefined));          // should log: "undefined"
+console.log(typeOf(function test() {})); // should log: "function"
+console.log(typeOf(true));               // should log: "boolean"
