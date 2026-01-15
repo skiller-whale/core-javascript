@@ -1,12 +1,19 @@
-"use strict"
+import recipes from "./data.js";
 
-const numbers = [2, 4, 10, 5, 6]
-
-let total = 0
-for (let i = 0; i < numbers.length; i += 1) {
-  total += numbers[i]
+// ----------------------------------------------------------------------
+// business logic
+// ----------------------------------------------------------------------
+function calculateTotalCookingTime(baseTime, servings, multiplier) {
+  servings = servings ?? 4;
+  multiplier = multiplier ?? servings * 0.1;
+  return baseTime + multiplier;
 }
 
-const average = total / numbers.length
-
-console.log(average)
+// ----------------------------------------------------------------------
+// execution
+// ----------------------------------------------------------------------
+for (let i = 0; i < recipes.length; i++) {
+  const recipe = recipes[i];
+  const totalTime = calculateTotalCookingTime(recipe.cookingTime);
+  console.log(`Cooking time for ${recipe.name} for 4 servings: ${totalTime} minutes`);
+}

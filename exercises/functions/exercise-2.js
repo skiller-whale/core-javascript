@@ -1,11 +1,19 @@
-"use strict"
-
-function add(a, b) {
-  return a + b
+// ----------------------------------------------------------------------
+// business logic
+// ----------------------------------------------------------------------
+function recipeSummary(recipe) {
+  return `${recipe.name} (Cooking time: ${recipe.cookingTime} minutes)`;
 }
 
-const result1 = add()
-const result2 = add(15)
+function createRecipe() {
+  // TODO: return new recipe with given name and ingredients
+}
 
-console.log(result1)
-console.log(result2)
+// ----------------------------------------------------------------------
+// execution
+// ----------------------------------------------------------------------
+const pasta = createRecipe("Pasta", 25, "spaghetti", "basil", "parmesan", "olive oil");
+console.log("-", recipeSummary(pasta));
+
+const salad = createRecipe("Salad", 10, "lettuce", "tomato", "cucumber", "olive oil");
+console.log("-", recipeSummary(salad));
