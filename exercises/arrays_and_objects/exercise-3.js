@@ -1,10 +1,14 @@
-import { catalogue, sortCatalogueByYear } from "./data.js";
+import catalogue from "./data.js";
 
 // ----------------------------------------------------------------------
 // business logic
 // ----------------------------------------------------------------------
+function sortCatalogueByYear(catalogue) {
+  return [...catalogue].sort((a, b) => a.year - b.year);
+}
+
 function getOldestBook(catalogue) {
-  const sortedCatalogue = sortCatalogueByYear([...catalogue]);
+  const sortedCatalogue = sortCatalogueByYear(catalogue);
   const firstBook = sortedCatalogue[0];
   return firstBook;
 }

@@ -1,15 +1,19 @@
-import { catalogue, sortCatalogueByYear } from "./data.js";
+import catalogue from "./data.js";
 
 // ----------------------------------------------------------------------
 // business logic
 // ----------------------------------------------------------------------
+function sortCatalogueByYear(catalogue) {
+  return [...catalogue].sort((a, b) => a.year - b.year);
+}
+
 function getOldestBook(catalogue) {
-  const sortedCatalogue = sortCatalogueByYear([...catalogue]);
+  const sortedCatalogue = sortCatalogueByYear(catalogue);
   return sortedCatalogue[0];
 }
 
 function getAllBooksExceptOldest(catalogue) {
-  const sortedCatalogue = sortCatalogueByYear([...catalogue]);
+  const sortedCatalogue = sortCatalogueByYear(catalogue);
   // TODO: return all books except the first one (the oldest book)
 }
 
