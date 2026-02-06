@@ -1,29 +1,41 @@
-"use strict"
+const whale = {
+  name: "Ada",
+  species: "Orca",
+  age: 5,
+  location: "Pacific Ocean",
+};
 
-function buildPerson(firstName, lastName, catchPhrase) {
-  return {
-    firstName: firstName,
-    lastName: lastName,
-
-    catchPhrase: function () {
-      console.log(catchPhrase)
-    },
-  }
+// ----------------------------------------------------------------------
+// business logic
+// ----------------------------------------------------------------------
+function countProperties(object) {
+  // TODO: return the count of properties
 }
 
-function addProperty(object, key, value) {
-  if (object[key]) return
-  object[key] = value
+function hasValue(object, value) {
+  // TODO: check if the value exists in the object
 }
 
-function removeProperty(object, key) {
-  if (!object[key]) return
-  delete object[key]
+function filterPropertiesByValue(object, predicateFn) {
+  // TODO: return a new object containing only properties where the value
+  // satisfies the predicate function
 }
 
-const person = buildPerson("Swim", "Shady", "Arms Spaghetti")
-person.catchPhrase()
+// ----------------------------------------------------------------------
+// execution
+// ----------------------------------------------------------------------
+console.log(countProperties(whale)); // Should log: 4
+console.log(hasValue(whale, "Orca")); // Should log: true
+console.log(hasValue(whale, "Atlantic Ocean")); // Should log: false
 
-addProperty(person, "age", 21)
-removeProperty(person, "catchPhrase")
-console.log(person)
+const onlyStrings = filterPropertiesByValue(
+  whale,
+  (value) => typeof value === "string",
+);
+console.log(JSON.stringify(onlyStrings)); // Should log: { name: "Ada", species: "Orca", location: "Pacific Ocean" }
+
+const onlyLongStrings = filterPropertiesByValue(
+  whale,
+  (value) => typeof value === "string" && value.length > 5,
+);
+console.log(JSON.stringify(onlyLongStrings)); // Should log: { location: "Pacific Ocean" }

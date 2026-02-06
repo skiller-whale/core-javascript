@@ -1,4 +1,4 @@
-export const catalogue = [
+export default [
   {
     title: "The Great Gatsby",
     authors: ["F. Scott Fitzgerald"],
@@ -35,7 +35,3 @@ export const catalogue = [
     available: true
   },
 ];
-
-export function sortCatalogueByYear(catalogue) {
-  catalogue.sort((a, b) => a.year - b.year);
-}
