@@ -1,41 +1,32 @@
-import home from "./handlers/home.js"
-import about from "./handlers/about.js"
-import blog from "./handlers/blog.js"
+import fs from "node:fs/promises";
 
-function handleRequest(request) {
-  const url = new URL(request.url)
-  const [, base, ...args] = url.pathname.split("/")
-  switch (base) {
-    case "home":
-      return home(...args)
-    case "about":
-      return about(...args)
-    case "blog":
-      return blog(...args)
-    default:
-      return { status: 404, body: "page not found" }
+// generate URL to search Hacker News for a given search term
+function hackerNewsUrl(searchTerm) {
+  return `http://hn.algolia.com/api/v1/search?hitsPerPage=4&query=${encodeURIComponent(searchTerm)}`;
+}
+
+// display the search results for a given search term and response data
+function displayHackerNewsSearchResult(searchTerm, data) {
+  if (data.hits.length > 0) {
+    console.log(`Hits for search term "${searchTerm}":`);
+    console.log(`------------------------${"-".repeat(searchTerm.length)}`);
+    data.hits.forEach((hit) => {
+      console.log(`  - Title: ${hit.title}`);
+      console.log(`    Url: ${hit.url}`);
+    });
+  } else {
+    console.log(`No hits for search term "${searchTerm}".`);
   }
+  console.log("");
 }
 
-function createRandomPathname() {
-  const rand = Math.random()
-  return rand < 0.2
-    ? "home"
-    : rand < 0.4
-      ? "about"
-      : rand < 0.6
-        ? `blog/${Math.floor(Math.random() * 10) + 1}`
-        : rand < 0.8
-          ? "contact"
-          : "does/not/exist"
+// read search terms from file, search Hacker News for each term, and display the results
+function search() {
+  // fs.readFile() returns a promise that fulfils with the file contents as a string
+  // TODO: parse the file contents as JSON, and for each search term, fetch and display
+  // the results from the Hacker News API using the functions above
+  fs.readFile("./data/searchTerms.json", "utf-8");
 }
 
-function createRandomRequest() {
-  return { method: "GET", url: `https://skillerwhale.com/${createRandomPathname()}` }
-}
-
-const request = createRandomRequest()
-const response = await handleRequest(request)
-
-console.log("Request:", request)
-console.log("Response:", response)
+// call the search function to execute the search and display results
+search();
